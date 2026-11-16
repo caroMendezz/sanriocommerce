@@ -1,0 +1,148 @@
+const products = [
+  {
+    name: 'Peluche Hello Kitty',
+    character: 'Hello Kitty',
+    emoji: '🎀',
+    description:
+      'La clásica gatita blanca con su moño rojo, ahora en versión ultra suave. Ideal para abrazar mientras mirás series o para decorar tu rincón favorito.',
+    material: 'Felpa de algodón hipoalergénico con relleno de fibra siliconada',
+    heightCm: 30,
+    weightGrams: 260,
+    price: 24900,
+    stock: 14,
+  },
+  {
+    name: 'Peluche My Melody',
+    character: 'My Melody',
+    emoji: '🐰',
+    description:
+      'Dulce conejita rosa con capucha y orejas largas. Perfecta para regalar y acompañar cualquier siesta.',
+    material: 'Felpa de poliéster premium con interior de algodón siliconado',
+    heightCm: 28,
+    weightGrams: 240,
+    price: 23900,
+    stock: 12,
+  },
+  {
+    name: 'Peluche Kuromi',
+    character: 'Kuromi',
+    emoji: '🖤',
+    description:
+      'La traviesa coneja con gorro negro y calavera. Tiene el tamaño justo para llevarla en la mochila a todos lados.',
+    material: 'Felpa de terciopelo suave con relleno de fibra antialérgica',
+    heightCm: 26,
+    weightGrams: 235,
+    price: 24500,
+    stock: 9,
+  },
+  {
+    name: 'Peluche Cinnamoroll',
+    character: 'Cinnamoroll',
+    emoji: '☁️',
+    description:
+      'El perrito blanco de orejas grandes y cola de canela. Es el abrazo más esponjoso de todo Sanrio.',
+    material: 'Felpa extra soft con relleno de microfibra siliconada',
+    heightCm: 32,
+    weightGrams: 290,
+    price: 25900,
+    stock: 10,
+  },
+  {
+    name: 'Peluche Pompompurin',
+    character: 'Pompompurin',
+    emoji: '🍮',
+    description:
+      'El golden retriever con boina que adora el pudín. Se sienta solito y queda genial en cualquier estante.',
+    material: 'Felpa de algodón peinado con relleno siliconado',
+    heightCm: 26,
+    weightGrams: 230,
+    price: 22900,
+    stock: 8,
+  },
+  {
+    name: 'Peluche Pochacco',
+    character: 'Pochacco',
+    emoji: '🐶',
+    description:
+      'El perrito blanco y negro más deportista de Sanrio. Con sus orejas caídas y patitas blanditas para jugar.',
+    material: 'Felpa de polar suave con relleno de fibra siliconada',
+    heightCm: 24,
+    weightGrams: 210,
+    price: 21900,
+    stock: 11,
+  },
+  {
+    name: 'Peluche Keroppi',
+    character: 'Keroppi',
+    emoji: '🐸',
+    description:
+      'La rana más simpática del estanque Donut Pond. Su sonrisa gigante alegra cualquier escritorio.',
+    material: 'Felpa de algodón hipoalergénico con relleno siliconado',
+    heightCm: 25,
+    weightGrams: 220,
+    price: 20900,
+    stock: 7,
+  },
+  {
+    name: 'Peluche Badtz-Maru',
+    character: 'Badtz-Maru',
+    emoji: '🐧',
+    description:
+      'El pingüino de mirada pícara que siempre tiene un plan. Un peluche con muchísima personalidad.',
+    material: 'Felpa de terciopelo con detalles bordados y relleno antialérgico',
+    heightCm: 26,
+    weightGrams: 225,
+    price: 21500,
+    stock: 6,
+  },
+  {
+    name: 'Peluche Chococat',
+    character: 'Chococat',
+    emoji: '🐈‍⬛',
+    description:
+      'El gatito negro de bigotes largos y nariz marrón. Tranquilo, curioso y experto en siestas largas.',
+    material: 'Felpa de peluche corto con relleno de microfibra',
+    heightCm: 27,
+    weightGrams: 235,
+    price: 22500,
+    stock: 5,
+  },
+  {
+    name: 'Peluche Little Twin Stars',
+    character: 'Little Twin Stars',
+    emoji: '⭐',
+    description:
+      'Kiki y Lala juntos en un solo peluche doble. Estrellitas celestes y rosas que brillan en la repisa.',
+    material: 'Felpa de algodón suave con hilos bordados en dorado',
+    heightCm: 30,
+    weightGrams: 275,
+    price: 26900,
+    stock: 4,
+  },
+  {
+    name: 'Peluche Gudetama',
+    character: 'Gudetama',
+    emoji: '🍳',
+    description:
+      'El huevo más vago y adorable del mundo, con su yema y camita incluidas. Energía nivel: cero.',
+    material: 'Felpa de microfibra con relleno siliconado',
+    heightCm: 22,
+    weightGrams: 195,
+    price: 19900,
+    stock: 13,
+  },
+  {
+    name: 'Peluche Hangyodon',
+    character: 'Hangyodon',
+    emoji: '🐟',
+    description:
+      'El pez azul con cara de pocos amigos y corazón enorme. Un clásico de Sanrio para coleccionistas.',
+    material: 'Felpa de poliéster con relleno de fibra antialérgica',
+    heightCm: 29,
+    weightGrams: 250,
+    price: 23500,
+    stock: 3,
+  },
+];
+
+module.exports = products;

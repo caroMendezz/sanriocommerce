@@ -1,0 +1,342 @@
+:root {
+  --pink-50: #fff7fa;
+  --pink-100: #ffe9f1;
+  --pink-200: #ffd3e3;
+  --pink-300: #ffb6d0;
+  --pink-400: #f98bb5;
+  --pink-500: #ef6a9c;
+  --pink-600: #d94f85;
+  --pink-700: #b33c6b;
+  --white: #ffffff;
+  --cream: #fffafc;
+  --ink: #4a3340;
+  --muted: #8a6d7c;
+  --border: #f6dbe6;
+  --shadow-soft: 0 12px 32px rgba(217, 79, 133, 0.1);
+  --shadow-card: 0 18px 40px rgba(217, 79, 133, 0.16);
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  --font-heading: 'Quicksand', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 12% 0%, #ffe4ee 0%, transparent 42%),
+    radial-gradient(circle at 90% 8%, #ffeef5 0%, transparent 38%),
+    linear-gradient(180deg, var(--pink-50) 0%, var(--white) 55%, var(--cream) 100%);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--ink);
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+::selection {
+  background: var(--pink-200);
+  color: var(--pink-700);
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  flex: 1;
+}
+
+.page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.4rem 1.5rem 3.5rem;
+}
+
+.page-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 4rem 1rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.spinner {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid var(--pink-100);
+  border-top-color: var(--pink-500);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.6rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.2;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--pink-500), var(--pink-400));
+  color: var(--white);
+  box-shadow: 0 10px 24px rgba(239, 106, 156, 0.28);
+}
+
+.btn-primary:hover:not(:disabled) {
+  box-shadow: 0 14px 30px rgba(239, 106, 156, 0.36);
+}
+
+.btn-secondary {
+  background: var(--pink-100);
+  color: var(--pink-700);
+  border: 1px solid var(--pink-200);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: var(--pink-200);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--pink-700);
+  border: 1px solid var(--pink-200);
+  padding: 0.65rem 1.2rem;
+  font-size: 0.85rem;
+}
+
+.btn-ghost:hover:not(:disabled) {
+  background: var(--pink-50);
+}
+
+.btn-danger {
+  background: #ffeced;
+  color: #bf3a5c;
+  border: 1px solid #ffd5dc;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #ffdfe3;
+}
+
+.btn-small {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.78rem;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* ---------- Formularios ---------- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1rem;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: #bda6b2;
+  font-weight: 500;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--pink-400);
+  box-shadow: 0 0 0 4px rgba(249, 139, 181, 0.18);
+}
+
+.field textarea {
+  resize: vertical;
+  min-height: 88px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 0.9rem;
+}
+
+.field-small input {
+  font-size: 1.35rem;
+  text-align: center;
+}
+
+.form-error {
+  margin: 0;
+  color: #b8395a;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ---------- Avisos ---------- */
+.notice {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.87rem;
+  font-weight: 700;
+}
+
+.notice-error {
+  background: #ffeef1;
+  border: 1px solid #ffd3dd;
+  color: #b8395a;
+}
+
+.notice-success {
+  background: #f1fff6;
+  border: 1px solid #c8f0d7;
+  color: #2f7d55;
+}
+
+.demo-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--pink-600);
+}
+
+/* ---------- Estados vacíos ---------- */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  background: var(--white);
+  border: 1px dashed var(--pink-200);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.empty-state > span {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.empty-state h1,
+.empty-state h2,
+.empty-state h3 {
+  font-size: 1.6rem;
+}
+
+.empty-state p {
+  color: var(--muted);
+  max-width: 46ch;
+}
